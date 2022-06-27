@@ -141,14 +141,14 @@ function renderPredictionBoxes (predictionBoxes, predictionClasses, predictionSc
 const width_ = (maxX-minX).toFixed(0);
         const height_ = (maxY-minY).toFixed(0);
 //If confidence is above 70%
-        if (score > 70 && score < 100){
+        if (score > 90 && score < 100){
             const highlighter = document.createElement('div');
             highlighter.setAttribute('class', 'highlighter');
             highlighter.style = 'left: ' + minX + 'px; ' +
                 'top: ' + minY + 'px; ' +
                 'width: ' + width_ + 'px; ' +
                 'height: ' + height_ + 'px;';
-            highlighter.innerHTML = '<p>'+Math.round(score) + '% ' + 'Your Object Name'+'</p>';
+            highlighter.innerHTML = '<p>'+Math.round(score) + '% ' + 'Hands'+'</p>';
             liveView.appendChild(highlighter);
             children.push(highlighter);
         }
